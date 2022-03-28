@@ -1,0 +1,22 @@
+.loader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 5px dashed rgba(0, 128, 128, 0.5);
+  animation: rotate 2s infinite both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+    box-shadow: 0 0 10px teal inset, 0 0 10px teal;
+    border: 5px double rgba(0, 128, 41, 0.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}

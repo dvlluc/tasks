@@ -1,0 +1,70 @@
+@import url(./reset.css);
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 800px;
+}
+
+.post {
+  display: flex;
+  padding: 15px;
+  border: 2px solid teal;
+  border-radius: 10px;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="text"],
+.post,
+button,
+select,
+select > option,
+.page {
+  border-radius: 10px;
+}
+
+.post-enter {
+  opacity: 0;
+  transform: translateX(-350px);
+}
+.post-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+.post-exit {
+  opacity: 1;
+}
+.post-exit-active {
+  opacity: 0;
+  transform: translateX(-350px);
+  transition: all 500ms ease-in;
+}
+
+.page__wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  padding: 10px;
+  margin: 0 3px;
+  border: 1px solid teal;
+  cursor: pointer;
+}
+
+.page:hover {
+  transform: translateY(-2px) scale(1.1);
+  transition: 0.5s;
+}
+
+.page__current {
+  color: white;
+  background-color: teal;
+}
