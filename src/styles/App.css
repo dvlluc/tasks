@@ -2,11 +2,13 @@
 
 #root {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items:center;
 }
 
-.App {
+.Posts, .About, .ErrorPage {
   width: 800px;
+  margin: 0 auto;
 }
 
 .post {
