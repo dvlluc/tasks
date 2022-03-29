@@ -15,7 +15,8 @@
   margin: 0 auto;
 }
 
-.PostIdItem, .commentItem {
+.PostIdItem,
+.commentItem {
   /* border: 3px   teal; */
   border-radius: 10px;
   padding: 10px;
@@ -23,9 +24,8 @@
   box-shadow: 0 0 10px teal inset;
 }
 
-.PostIdItem{
+.PostIdItem {
   box-shadow: 0 0 10px teal, 0 50px 50px teal inset;
-  
 }
 
 .post {
@@ -36,10 +36,6 @@
   margin-top: 15px;
   justify-content: space-between;
   align-items: center;
-}
-
-.commentItem{
-  
 }
 
 .post__btns {
