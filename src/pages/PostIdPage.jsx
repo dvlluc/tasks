@@ -34,7 +34,9 @@ const PostIdPage = () => {
       }}
     >
       {isLoading ? (
-        <Loader />
+        <div className="PostIdItem" style={{display: "flex",justifyContent:"center"}}>
+          <Loader />
+        </div>
       ) : (
         <div className="PostIdItem">
           <h1 style={{ textAlign: "center" }}>
@@ -44,7 +46,9 @@ const PostIdPage = () => {
         </div>
       )}
       {isComLoading ? (
-        <Loader />
+        <div className="CommentsToPost" style={{display: "flex",justifyContent:"center"}}>
+          <Loader />
+        </div>
       ) : (
         <div className="CommentsToPost">
           <h1>Комментарии</h1>
