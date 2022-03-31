@@ -11,7 +11,6 @@ import MySelect from "../components/UI/select/MySelect";
 import { getPageCount } from "../components/utils/pages";
 import { useFetching } from "../hooks/useFetching";
 import { useObserver } from "../hooks/useObserver";
-// import { usePagination } from "./hooks/usePagination";
 import { usePosts } from "../hooks/usePost";
 
 function Posts() {
@@ -19,10 +18,8 @@ function Posts() {
   const [filter, setFilter] = useState({ sort: "", query: "" });
   const [modal, setModal] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
-  // const [totalCount, setTotalCount] = useState(0);
   const [limit, setLimit] = useState(5);
   const [page, setPage] = useState(1);
-  // let pagesArray = usePagination(posts.length, limit);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
   const lastElement = useRef();
 
@@ -39,7 +36,7 @@ function Posts() {
 
   useEffect(() => {
     fetchPosts(limit, page);
-  }, [page, limit]);
+  }, [limit, page]);
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
